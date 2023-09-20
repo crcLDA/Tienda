@@ -1,0 +1,66 @@
+/* 
+    Created on : 19 sept 2023, 19:26:15
+    Author     : antho
+*/
+
+/*por id*/
+#encabezado{ /*se encuentra en ejm9*/
+    color:blueviolet;
+    font-weight: bold; 
+}
+
+#TituloPrincipal{
+    color: aquamarine;
+}
+
+/*por clase*/
+.parrafosCentrados{
+    text-align: center;
+    font-weight: bold;
+    color: #00cccc;
+}
+
+.textoVerde{
+    color: yellowgreen; 
+}
+
+*{ /*selector universal*/
+    color: salmon;
+}
+
+p, h2{ /*selector de elemento*/
+    text-height: 15;
+}
+
+/*selector descendente*/
+p span { /*todos los span que esten dentro de un parrafo*/
+    color:gray;
+}
+
+a:link{
+    background-color: green;
+    color: white;
+}
+a:visited{
+    background-color: violet;
+    color: white;
+}
+
+a:hover{
+    background-color: darkblue;
+    color:white;
+}
+a:active{
+    background-color: red;
+    color:white;
+}
+
+p:nth-child(odd){ /*pares*/
+    background-color: darksalmon;
+    color:black;
+}
+
+p:nth-child(even){ /*impares*/
+    background-color: cyan;
+    color:black;
+}
