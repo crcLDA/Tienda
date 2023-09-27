@@ -4,7 +4,7 @@
 */
 
 /*por id*/
-#encabezado{ /*se encuentra en ejm9*/
+/*#encabezado{ /*ejem 9*//*
     color:blueviolet;
     font-weight: bold; 
 }
@@ -13,7 +13,7 @@
     color: aquamarine;
 }
 
-/*por clase*/
+/*por clase*//*
 .parrafosCentrados{
     text-align: center;
     font-weight: bold;
@@ -24,16 +24,16 @@
     color: yellowgreen; 
 }
 
-*{ /*selector universal*/
+*{ /*selector universal*//*
     color: salmon;
 }
 
-p, h2{ /*selector de elemento*/
+p, h2{ /*selector de elemento*//*
     text-height: 15;
 }
 
-/*selector descendente*/
-p span { /*todos los span que esten dentro de un parrafo*/
+/*selector descendente*//*
+p span { /*todos los span que esten dentro de un parrafo*//*
     color:gray;
 }
 
@@ -55,12 +55,43 @@ a:active{
     color:white;
 }
 
-p:nth-child(odd){ /*pares*/
+p:nth-child(odd){ /*pares*//*
     background-color: darksalmon;
     color:black;
 }
 
-p:nth-child(even){ /*impares*/
+p:nth-child(even){ /*impares*//*
     background-color: cyan;
     color:black;
+}*/
+
+#barralateral{ 
+    height: 81%;
+    top:12%;
+    left:0;
+    width: 20%;
+    position: absolute;
+    background-color: burlywood;
+    padding: 10px;
+}
+
+.contenido{
+    position: absolute;
+    height: 81%;
+    top:12%;
+    left:20%;
+    width: 80%;
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+#piepagina{
+    position: absolute;
+    height: 7%;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+    padding-top: 25px;
 }

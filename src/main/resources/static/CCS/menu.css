@@ -1,0 +1,71 @@
+/* 
+    Created on : 26 sept 2023, 20:12:01
+    Author     : antho
+*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:  sans-serif;
+    padding: 45px 20px 0px;
+}
+
+.header{
+    background-color: navy;
+    height: 12%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 990px;
+    margin: 0 auto; /*centrar los elementos*/
+    text-align: center;
+}
+
+
+
+.logo{
+    color: aquamarine;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    align-content: center;
+}
+
+.nav-menu-item{
+    font-size: 18px;
+    margin: 6% auto;
+    /*line-height: 90px;*/
+    width: max-content;
+    align-content: center;
+}
+
+.nav-menu-link{
+    padding: 8px 12px;
+    border-radius: 10px
+}
+
+.nav-menu-link:hover{ /*es cuando el mouse esta encima*/
+    background-color: cyan;
+    transition: 0.7s; /*duracion de la trasicion*/
+}
