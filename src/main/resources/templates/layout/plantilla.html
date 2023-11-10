@@ -8,10 +8,11 @@
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/rutinas.js}"></script>
     </head>
     <body>
         <header th:fragment="header" class="header">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-secondary p-0">
                 <div class="container">
                     <a th:href="@{/}" class="navbar-brand">[[#{aplicacion.titulo}]]</a>
                     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -24,6 +25,8 @@
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
                         </ul>
                         <ul class="navbar-nav">
+                            <label><i class="fa-solid fa-gear" th:href="@{/categoria/listado}"></i>d</label>
+  <!-- 23-25, 28 revisar icono de menu-->                          
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Lang</a>
                                 <ul class="dropdown-menu dropdown-menu-dark">
