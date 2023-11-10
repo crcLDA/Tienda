@@ -31,13 +31,14 @@ public class Categoria implements Serializable { //convierte la clase en entidad
     private String rutaImagen;
     private boolean activo;
     
-    /*@OneToMany
-    @JoinColumn(name="id_categoria")
-    List<Producto> productos;*/
+    @OneToMany
+    @JoinColumn(name="id_categoria", insertable=false, updatable=false)
+    List<Producto> productos;
     
 
     public Categoria() {}
 
+    //sin la llave primaria
     public Categoria(String descripcion, String rutaImagen, boolean activo) {
         this.descripcion = descripcion;
         this.rutaImagen = rutaImagen;

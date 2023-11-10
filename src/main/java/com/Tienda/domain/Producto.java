@@ -22,7 +22,7 @@ public class Producto implements Serializable{
     @Column(name="id_producto")
     private Long idProducto;
     
-    private Long idCategoria;
+    //private Long idCategoria;
     private String descripcion;
     private String detalle;
     private double precio;
@@ -32,22 +32,23 @@ public class Producto implements Serializable{
     
     
     //esto realizla FK de la otra tabla
-    //@ManyToOne
-   // @JoinColumn(name="id_categoria")
-    //private Categoria categoria;
+    @ManyToOne
+    @JoinColumn(name="id_categoria")//este es de esta tabla
+    private Categoria categoria;
 
     public Producto() {}
 
-    public Producto(Long idProducto, String descripcion, String detalle, double precio, int existencias, String rutaImagen, boolean activo, Long idCategoria) {
-        this.idProducto = idProducto;
+    public Producto(String descripcion, String detalle, double precio, int existencias, String rutaImagen, boolean activo, Categoria categoria) {
         this.descripcion = descripcion;
         this.detalle = detalle;
         this.precio = precio;
         this.existencias = existencias;
         this.rutaImagen = rutaImagen;
         this.activo = activo;
-        this.idCategoria = idCategoria;
+        this.categoria = categoria;
     }
+
+    
     
     
 }

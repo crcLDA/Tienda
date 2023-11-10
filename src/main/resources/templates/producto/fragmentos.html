@@ -41,7 +41,10 @@
                             <div class="modal-body">
                                 <div class="mb-3">
                                     <label for="idCategoria">[[#{producto.categoria}]]</label>
-                                    <input type="number" class="form-control" name="idCategoria" required="true"/>
+                                    <!--<input type="number" class="form-control" name="idCategoria" required="true"/>-->
+                                    <select name="categoria.idCategoria" class="form-control">
+                                        <option th:each="item : ${categorias}" th:value="${item.idCategoria}" th:if="${item.descripcion == 'teclados'} ? 'selected' : ''">[[${item.descripcion}]]</option>
+                                    </select><!--ese th:if es para seleccionar un valor por defecto--> 
                                 </div>
                                 <div class="mb-3">
                                     <label for="descripcion">[[#{producto.descripcion}]]</label>
@@ -109,7 +112,7 @@
                                             <td>[[${producto.precio}]]</td>
                                             <td>[[${producto.existencias}]]</td>
                                             <td th:text="${producto.activo} ? 'Activa' : 'Inactiva'" />
-                                            <td>[[${producto.idCategoria}]]</td> <!--enviar parametro (siguiente linea)-->
+                                            <td>[[${producto.categoria.descripcion}]]</td> <!--enviar parametro (siguiente linea)-->
                                             <td><a th:href="@{/producto/eliminar/}+${producto.idProducto}" 
                                                    class="btn btn-danger">
                                                     <i class="fas fa-trash"></i> [[#{accion.eliminar}]]</a>
@@ -160,9 +163,12 @@
                                             <div class="card-body">
                                                 <div class="mb-3">
                                                     <label for="idCategoria">[[#{producto.categoria}]]</label>
-                                                    <input type="number" class="form-control" name="idCategoria" 
+                                                    <!--<input type="number" class="form-control" name="idCategoria" 
                                                            th:field="*{idCategoria}"
-                                                           required="true"/>
+                                                           required="true"/>-->
+                                                    <select name="categoria.idCategoria" th:field="*{categoria.idCategoria}" class="form-control">
+                                                        <option th:each="item : ${categorias}" th:value="${item.idCategoria}" th:if="${item.descripcion == 'teclados'} ? 'selected' : ''">[[${item.descripcion}]]</option>
+                                                    </select><!--ese th:if es para seleccionar un valor por defecto--> 
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="descripcion">[[#{producto.descripcion}]]</label>
