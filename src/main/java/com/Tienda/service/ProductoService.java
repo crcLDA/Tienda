@@ -14,12 +14,12 @@ public interface ProductoService {
     
     public void delete(Producto producto);
     
-   /* //Lista de productos con precio entre ordenados por descripcion ConsultaAmpliada
+   //Lista de productos con precio entre ordenados por descripcion ConsultaAmpliada
     public List<Producto> findByPrecioBetweenOrderByDescripcion(double precioInf, double precioSup);
     
     //Lista de productos utilizando consultas JPQL
     public List<Producto> metodoJPQL(double precioInf, double precioSup);
     
     //Lista de productos utilizando consultas con SQL Nativo
-    public List<Producto> metodoNativo(double precioInf, double precioSup);*/
+    public List<Producto> metodoNativo(double precioInf, double precioSup);
 }
