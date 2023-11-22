@@ -1,6 +1,5 @@
 package com.Tienda;
 
-import com.Tienda.service.UsuarioService;
 import java.util.Locale;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
@@ -21,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import com.Tienda.service.UsuarioDetailsService;
 
 //la anotacion (@) no se utilizan espacios o saltos de linea, sino que va directo sobre lo que va a utilizar la anotaicion
 
@@ -29,6 +29,9 @@ public class ProjectConfig implements WebMvcConfigurer{
     //estos métodos son para la implementacion de la internacionalización
     @Autowired
     private UserDetailsService userDetailsService;
+    
+    @Autowired
+    private UsuarioDetailsService usuarioService;
     
     @Autowired
     public void configurerGlobal(AuthenticationManagerBuilder builder) throws Exception{
